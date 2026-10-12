@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R Keerthana — Resume | Java Full Stack Developer</title>
+
+    <!-- Meta Description & SEO -->
+    <meta name="description"
+        content="Official Resume of R Keerthana - MCA Graduate & Java Full Stack Developer. View technical skills, academic projects, education, and credentials.">
+    <meta name="author" content="R Keerthana">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --primary-light: #eef2ff;
+            --accent: #7c3aed;
+            --text-main: #0f172a;
+            --text-secondary: #334155;
+            --text-muted: #64748b;
+            --bg-page: #f8fafc;
+            --bg-paper: #ffffff;
+            --border-color: #e2e8f0;
+            --border-strong: #cbd5e1;
+            --tag-bg: #f1f5f9;
+            --shadow-paper: 0 10px 30px -5px rgba(15, 23, 42, 0.08), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+            --font-heading: 'Outfit', 'Inter', -apple-system, sans-serif;
+            --font-body: 'Inter', -apple-system, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-main);
+            background-color: var(--bg-page);
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Top Action Bar (Fixed / Sticky) */
+        .resume-topbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+        }
+
+        .resume-nav-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 8px 16px;
+            border-radius: 999px;
+            background: #f1f5f9;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        .resume-nav-back:hover {
+            background: var(--primary-light);
+            color: var(--primary);
+            border-color: var(--primary);
+            transform: translateX(-2px);
+        }
+
+        .view-mode-tabs {
+            display: inline-flex;
+            background: #f1f5f9;
+            padding: 4px;
+            border-radius: 999px;
+            border: 1px solid var(--border-color);
+            gap: 4px;
+        }
+
+        .mode-tab-btn {
+            border: none;
+            background: transparent;
+            padding: 6px 16px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .mode-tab-btn.active {
+            background: #ffffff;
+            color: var(--primary);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .resume-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.86rem;
+            font-weight: 600;
+            padding: 8px 18px;
+            border-radius: 999px;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-print {
+            background: #ffffff;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-print:hover {
+            background: #f8fafc;
+            border-color: var(--text-muted);
+        }
+
+        .btn-download {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);
+        }
+
+        .btn-download:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(79, 70, 229, 0.35);
+        }
+
+        /* Page Container */
+        .resume-container {
+            max-width: 900px;
+            margin: 32px auto 60px;
+            padding: 0 20px;
+        }
+
+        /* Document Paper */
+        .resume-paper {
+            background: var(--bg-paper);
+            border-radius: 12px;
+            box-shadow: var(--shadow-paper);
+            border: 1px solid var(--border-color);
+            padding: 48px 56px;
+            position: relative;
+        }
+
+        /* Resume Header */
+        .res-header {
+            text-align: center;
+            border-bottom: 2px solid #0f172a;
+            padding-bottom: 20px;
+            margin-bottom: 24px;
+        }
+
+        .res-name {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            color: #0f172a;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .res-role {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .res-contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 16px 24px;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+        }
+
+        .res-contact-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .res-contact-item i {
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+
+        a.res-contact-item:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        .res-location {
+            color: var(--text-muted);
+            font-size: 0.86rem;
+            margin-top: 6px;
+        }
+
+        /* Section Headings */
+        .res-section {
+            margin-bottom: 24px;
+        }
+
+        .res-section-title {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #0f172a;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1.5px solid var(--border-strong);
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+        }
+
+        .res-section-title i {
+            color: var(--primary);
+            font-size: 1rem;
+        }
+
+        .res-section-body {
+            color: var(--text-secondary);
+            font-size: 0.93rem;
+        }
+
+        /* Summary */
+        .res-summary-text {
+            line-height: 1.65;
+            color: var(--text-secondary);
+            font-size: 0.93rem;
+            text-align: justify;
+        }
+
+        /* Technical Skills */
+        .skills-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .skill-row {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            align-items: baseline;
+            gap: 12px;
+            font-size: 0.92rem;
+        }
+
+        .skill-category {
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .skill-list {
+            color: var(--text-secondary);
+        }
+
+        /* Education */
+        .edu-item {
+            margin-bottom: 14px;
+        }
+
+        .edu-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-bottom: 2px;
+        }
+
+        .edu-degree {
+            font-weight: 700;
+            color: #0f172a;
+            font-size: 0.95rem;
+        }
+
+        .edu-dates {
+            font-family: var(--font-mono);
+            font-size: 0.84rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .edu-sub {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+        }
+
+        .edu-score {
+            font-weight: 700;
+            color: var(--primary);
+            background: var(--primary-light);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 0.82rem;
+        }
+
+        /* Projects */
+        .project-item {
+            margin-bottom: 16px;
+            padding-bottom: 14px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .project-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .proj-header-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 4px;
+            flex-wrap: wrap;
+        }
+
+        .proj-name {
+            font-weight: 700;
+            font-size: 0.98rem;
+            color: #0f172a;
+            margin-bottom: 0;
+        }
+
+        .proj-demo-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.76rem;
+            font-weight: 600;
+            color: var(--primary);
+            background: var(--primary-light);
+            border: 1px solid rgba(79, 70, 229, 0.22);
+            padding: 2px 10px;
+            border-radius: 999px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .proj-demo-link:hover {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        .proj-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+
+        .proj-tech {
+            font-size: 0.84rem;
+            color: var(--text-muted);
+        }
+
+        .proj-tech strong {
+            color: var(--text-main);
+        }
+
+        .proj-tech-badges {
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 4px;
+        }
+
+        .tech-pill {
+            display: inline-block;
+            background: #f1f5f9;
+            color: var(--primary-dark);
+            font-size: 0.76rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Soft Skills & Extra Info */
+        .info-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .info-pill {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .cert-card {
+            background: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            padding: 10px 16px;
+            border-radius: 0 8px 8px 0;
+            font-weight: 600;
+            font-size: 0.92rem;
+            color: #0f172a;
+        }
+
+        /* PDF Viewer Container (Hidden by default, activated via tab) */
+        .pdf-viewer-view {
+            display: none;
+            width: 100%;
+            height: calc(100vh - 120px);
+            min-height: 700px;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: var(--shadow-paper);
+            background: #ffffff;
+            overflow: hidden;
+        }
+
+        .pdf-viewer-view iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .resume-topbar {
+                flex-wrap: wrap;
+                padding: 10px 16px;
+            }
+
+            .resume-paper {
+                padding: 28px 20px;
+            }
+
+            .res-name {
+                font-size: 1.6rem;
+            }
+
+            .res-contact-bar {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .skill-row {
+                grid-template-columns: 1fr;
+                gap: 2px;
+            }
+
+            .view-mode-tabs {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* Print Mode Formatting */
+        @media print {
+            .resume-topbar {
+                display: none !important;
+            }
+
+            body {
+                background: #ffffff !important;
+                color: #000000 !important;
+            }
+
+            .resume-container {
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            .resume-paper {
+                box-shadow: none !important;
+                border: none !important;
+                padding: 0 !important;
+                border-radius: 0 !important;
+            }
+
+            .pdf-viewer-view {
+                display: none !important;
+            }
+
+            .interactive-view {
+                display: block !important;
+            }
+
+            .tech-pill {
+                border: 1px solid #ccc !important;
+                background: transparent !important;
+                color: #000 !important;
+            }
+
+            .res-section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sticky Navigation & Action Toolbar -->
+    <header class="resume-topbar">
+        <a href="index.html" class="resume-nav-back">
+            <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+        </a>
+
+        <!-- Switcher between Web View and Original PDF View -->
+        <div class="view-mode-tabs">
+            <button class="mode-tab-btn active" id="tab-web" onclick="switchMode('web')">
+                <i class="fa-solid fa-file-lines"></i> Interactive Resume
+            </button>
+            <button class="mode-tab-btn" id="tab-pdf" onclick="switchMode('pdf')">
+                <i class="fa-regular fa-file-pdf"></i> Original PDF
+            </button>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="resume-actions">
+            <button class="btn-action btn-print" onclick="window.print()" title="Print Resume">
+                <i class="fa-solid fa-print"></i> Print
+            </button>
+            <a href="Keerthana_R_Resume_Updated (1).pdf" download="Keerthana_R_Resume.pdf"
+                class="btn-action btn-download" title="Download Official PDF">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+        </div>
+    </header>
+
+    <div class="resume-container">
+
+        <!-- ================= 1. INTERACTIVE WEB RESUME ================= -->
+        <main class="resume-paper interactive-view" id="interactive-resume-view">
+
+            <!-- Header Section -->
+            <header class="res-header">
+                <h1 class="res-name">R. Keerthana</h1>
+                <p class="res-role">MCA Student &bull; Java Full Stack Developer (Fresher)</p>
+                <div class="res-contact-bar">
+                    <a href="tel:+916383060233" class="res-contact-item">
+                        <i class="fa-solid fa-phone"></i> +91 6383060233
+                    </a>
+                    <a href="mailto:keerthanaramasamy1@gmail.com" class="res-contact-item">
+                        <i class="fa-solid fa-envelope"></i> keerthanaramasamy1@gmail.com
+                    </a>
+                    <a href="https://github.com/keerthanaramasamy3001-commits" target="_blank" class="res-contact-item">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                </div>
+                <p class="res-location">
+                    <i class="fa-solid fa-location-dot"></i> Thiruppurambiyam, Kumbakonam, Thanjavur, Tamil Nadu
+                </p>
+            </header>
+
+            <!-- Professional Summary -->
+            <section class="res-section">
+                <h2 class="res-section-title">
+                    <i class="fa-solid fa-user"></i> Professional Summary
+                </h2>
+                <div class="res-section-body">
+                    <p class="res-summary-text">
+                        Motivated MCA student with strong knowledge in Java, Spring Boot, .NET, HTML, CSS, JavaScript,
+                        PHP
+                        and MySQL. Passionate about developing web applications and SaaS products, and eager to
+                        contribute
+                        my technical skills to an organization and grow along with it.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Technical Skills -->
+            <section class="res-section">
+                <h2 class="res-section-title">
+                    <i class="fa-solid fa-code"></i> Technical Skills
+                </h2>
+                <div class="res-section-body">
+                    <div class="skills-grid">
+                        <div class="skill-row">
+                            <span class="skill-category">Frontend:</span>
+                            <span class="skill-list">HTML5, CSS3, JavaScript, Bootstrap</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-category">Backend:</span>
+                            <span class="skill-list">PHP, Java, Spring Boot, C# (.NET)</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-category">Database:</span>
+                            <span class="skill-list">MySQL, SQL Server</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-category">Tools &amp; Platforms:</span>
+                            <span class="skill-list">Git, GitHub, VS Code, Eclipse</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-category">Other Software:</span>
+                            <span class="skill-list">MS Excel, MS Word, MS PowerPoint</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="res-section">
+                <h2 class="res-section-title">
+                    <i class="fa-solid fa-graduation-cap"></i> Education
+                </h2>
+                <div class="res-section-body">
+
+                    <div class="edu-item">
+                        <div class="edu-header">
+                            <span class="edu-degree">Master of Computer Applications (MCA)</span>
+                            <span class="edu-dates">2024 – 2026</span>
+                        </div>
+                        <div class="edu-sub">
+                            <span>Bharathidasan University</span>
+                            <span class="edu-score">71%</span>
+                        </div>
+                    </div>
+
+                    <div class="edu-item">
+                        <div class="edu-header">
+                            <span class="edu-degree">Bachelor of Computer Applications (BCA)</span>
+                            <span class="edu-dates">2021 – 2024</span>
+                        </div>
+                        <div class="edu-sub">
+                            <span>Mass College of Arts &amp; Science, Kumbakonam &bull; Bharathidasan University</span>
+                            <span class="edu-score">76%</span>
+                        </div>
+                    </div>
+
+                    <div class="edu-item">
+                        <div class="edu-header">
+                            <span class="edu-degree">Higher Secondary Certificate (HSC)</span>
+                            <span class="edu-dates">2020 – 2021</span>
+                        </div>
+                        <div class="edu-sub">
+                            <span>Minerva Hr. Sec School, Kadichampadi &bull; State Board</span>
+                            <span class="edu-score">63%</span>
+                        </div>
+                    </div>
+
+                    <div class="edu-item">
+                        <div class="edu-header">
+                            <span class="edu-degree">Secondary School Leaving Certificate (SSLC)</span>
+                            <span class="edu-dates">2018 – 2019</span>
+                        </div>
+                        <div class="edu-sub">
+                            <span>Karthi Vidhyalaya Hr. Sec. School, Kumbakonam &bull; State Board</span>
+                            <span class="edu-score">75%</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section class="res-section">
+                <h2 class="res-section-title">
+                    <i class="fa-solid fa-laptop-code"></i> Projects
+                </h2>
+                <div class="res-section-body">
+
+                    <div class="project-item">
+                        <div class="proj-header-row">
+                            <h3 class="proj-name">1. QR Menu SaaS</h3>
+                            <a href="https://keerthana01.freepage.cc/qr-menu/" target="_blank" class="proj-demo-link"
+                                title="Open Live Demo">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                        </div>
+                        <p class="proj-desc">
+                            A multi-tenant SaaS platform where restaurants create digital menus and generate a QR code;
+                            customers scan the code to view the live menu on their phones.
+                        </p>
+                        <div class="proj-tech">
+                            <div class="proj-tech-badges">
+                                <span class="tech-pill">PHP</span>
+                                <span class="tech-pill">JSON</span>
+                                <span class="tech-pill">HTML5</span>
+                                <span class="tech-pill">CSS3</span>
+                                <span class="tech-pill">JavaScript</span>
+                                <span class="tech-pill">QR Code Generation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="proj-header-row">
+                            <h3 class="proj-name">2. Real Estate Lead &amp; Site-Visit CRM</h3>
+                            <a href="https://keerthana01.freepage.cc/realestatecrm/" target="_blank"
+                                class="proj-demo-link" title="Open Live Demo">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                        </div>
+                        <p class="proj-desc">
+                            A CRM to capture property enquiries, track leads through stages, and schedule and manage
+                            site
+                            visits for agents (extension of Kumbakonam Property Connect).
+                        </p>
+                        <div class="proj-tech">
+                            <div class="proj-tech-badges">
+                                <span class="tech-pill">PHP</span>
+                                <span class="tech-pill">JSON</span>
+                                <span class="tech-pill">HTML5</span>
+                                <span class="tech-pill">CSS3</span>
+                                <span class="tech-pill">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="proj-header-row">
+                            <h3 class="proj-name">3. Smart ID Card Management System</h3>
+                            <a href="https://github.com/keerthanaramasamy3001-commits/IDCARD-" target="_blank"
+                                class="proj-demo-link" title="Open GitHub Repository">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                        <p class="proj-desc">
+                            A web application to design, generate, manage and print ID cards for organizations with
+                            dynamic record handling and template styling.
+                        </p>
+                        <div class="proj-tech">
+                            <div class="proj-tech-badges">
+                                <span class="tech-pill">HTML5</span>
+                                <span class="tech-pill">CSS3</span>
+                                <span class="tech-pill">JavaScript</span>
+                                <span class="tech-pill">PHP</span>
+                                <span class="tech-pill">MySQL</span>
+                                <span class="tech-pill">JSON</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="proj-header-row">
+                            <h3 class="proj-name">4. PASPORT: A Secure and Private Location Proof Generation and
+                                Verification Framework</h3>
+                            <a href="https://github.com/keerthanaramasamy3001-commits/passport" target="_blank"
+                                class="proj-demo-link" title="Open GitHub Repository">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                        <p class="proj-desc">
+                            A secure web framework for generating and verifying location proofs with privacy protection
+                            and cryptographic assurance.
+                        </p>
+                        <div class="proj-tech">
+                            <div class="proj-tech-badges">
+                                <span class="tech-pill">HTML5</span>
+                                <span class="tech-pill">CSS3</span>
+                                <span class="tech-pill">JavaScript</span>
+                                <span class="tech-pill">PHP</span>
+                                <span class="tech-pill">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="proj-header-row">
+                            <h3 class="proj-name">5. Suicidal Ideation Detection: A Review of Machine Learning Methods
+                                and
+                                Applications</h3>
+                            <a href="https://keerthana01.freepage.cc/project2/" target="_blank" class="proj-demo-link"
+                                title="Open Live Demo">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                        </div>
+                        <p class="proj-desc">
+                            A web-based review platform to analyze and present machine learning methods and models for
+                            suicidal ideation detection.
+                        </p>
+                        <div class="proj-tech">
+                            <div class="proj-tech-badges">
+                                <span class="tech-pill">PHP 8.x</span>
+                                <span class="tech-pill">HTML5</span>
+                                <span class="tech-pill">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Certifications -->
+            <section class="res-section">
+                <h2 class="res-section-title">
+                    <i class="fa-solid fa-award"></i> Certification
+                </h2>
+                <div class="res-section-body">
+                    <div class="cert-card">
+                        <i class="fa-solid fa-certificate" style="color: var(--primary); margin-right: 6px;"></i>
+                        Full-Stack Development Course &mdash; Qvesys Info Tech, 2026
+                    </div>
+                </div>
+            </section>
+
+            <!-- Soft Skills & Languages -->
+            <section class="res-section">
+                <h2 class="res-section-title">
+                    <i class="fa-solid fa-comments"></i> Soft Skills &amp; Languages
+                </h2>
+                <div class="res-section-body" style="display: flex; flex-direction: column; gap: 10px;">
+                    <div>
+                        <strong style="font-size: 0.9rem; color: #0f172a; display: block; margin-bottom: 6px;">Soft
+                            Skills:</strong>
+                        <div class="info-list">
+                            <span class="info-pill">Ability to Deal with People</span>
+                            <span class="info-pill">Handling Pressure</span>
+                            <span class="info-pill">Leadership &amp; Motivational Skills</span>
+                            <span class="info-pill">Willingness to Learn</span>
+                            <span class="info-pill">Sincere and Loyal</span>
+                        </div>
+                    </div>
+                    <div>
+                        <strong
+                            style="font-size: 0.9rem; color: #0f172a; display: block; margin-bottom: 6px;">Languages:</strong>
+                        <div class="info-list">
+                            <span class="info-pill">Tamil</span>
+                            <span class="info-pill">English</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Additional Information -->
+            <section class="res-section" style="margin-bottom: 0;">
+                <h2 class="res-section-title">
+                    <i class="fa-solid fa-circle-info"></i> Additional Information
+                </h2>
+                <div class="res-section-body">
+                    <div class="skill-row" style="margin-bottom: 4px;">
+                        <span class="skill-category">Date of Birth:</span>
+                        <span class="skill-list">30/01/2004</span>
+                    </div>
+                    <div class="skill-row" style="margin-bottom: 4px;">
+                        <span class="skill-category">Gender:</span>
+                        <span class="skill-list">Female</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-category">Nationality:</span>
+                        <span class="skill-list">Indian</span>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ================= 2. ORIGINAL PDF VIEWER ================= -->
+        <div class="pdf-viewer-view" id="pdf-resume-view">
+            <iframe src="Keerthana_R_Resume_Updated%20(1).pdf#toolbar=1" title="Keerthana R Resume PDF Viewer"></iframe>
+        </div>
+
+    </div>
+
+    <script>
+        function switchMode(mode) {
+            const webView = document.getElementById('interactive-resume-view');
+            const pdfView = document.getElementById('pdf-resume-view');
+            const tabWeb = document.getElementById('tab-web');
+            const tabPdf = document.getElementById('tab-pdf');
+
+            if (mode === 'pdf') {
+                webView.style.display = 'none';
+                pdfView.style.display = 'block';
+                tabPdf.classList.add('active');
+                tabWeb.classList.remove('active');
+            } else {
+                pdfView.style.display = 'none';
+                webView.style.display = 'block';
+                tabWeb.classList.add('active');
+                tabPdf.classList.remove('active');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
