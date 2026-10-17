@@ -5,22 +5,21 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="OFCUzTAQqF_b0vVWqLbZ0F1FEj0Hmawxfs19vyqNASk" />
 
-    <title>R Keerthana — Software &amp; Web Developer | Portfolio</title>
+    <title>R Keerthana — Java Full Stack Developer &amp; Digital Marketing | Portfolio</title>
 
     <!-- SEO Meta Keywords & Description -->
     <meta name="keywords"
-        content="R Keerthana, Keerthana R, Full Stack Developer, MCA Graduate, .NET Developer, SQL Database Developer, Software Developer, Web Developer, Web Designer, C# Developer, Frontend Developer, Backend Developer, Bharathidasan University, Kumbakonam Web Developer, Tamil Nadu Software Engineer, HTML CSS JavaScript, Portfolio">
+        content="R Keerthana, Keerthana R, Java Full Stack Developer, Digital Marketing Specialist, SEO Specialist, Content Marketing, Social Media Marketing, Graphic Design, MCA Student, PHP MySQL Developer, Spring Boot, Web Developer, Web Designer, Bharathidasan University, Kumbakonam Web Developer, Tamil Nadu Software Engineer, HTML CSS JavaScript, Portfolio">
     <meta name="description"
-        content="Portfolio of R Keerthana — Detail-oriented MCA Post-Graduate & Full-Stack Web Developer specializing in .NET, SQL, and modern responsive web applications.">
+        content="Official Portfolio of R Keerthana — MCA Student, Java Full Stack Developer & Digital Marketing Specialist with expertise in Spring Boot, PHP, MySQL, SEO, Content Marketing, and modern responsive web applications.">
     <meta name="author" content="R Keerthana">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="R Keerthana — Software &amp; Full Stack Web Developer">
+    <meta property="og:title" content="R Keerthana — Java Full Stack Developer &amp; Digital Marketing">
     <meta property="og:description"
-        content="Explore projects, skills, education, and credentials of R Keerthana — Full-Stack Web Developer.">
+        content="Explore projects, skills, education, and credentials of R Keerthana — Java Full Stack Developer & Digital Marketing Specialist.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/keerthana.png">
 
@@ -28,7 +27,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="R Keerthana — Portfolio">
     <meta name="twitter:description"
-        content="MCA Post-Graduate & Full-Stack Web Developer specializing in .NET, SQL, and Web Technologies.">
+        content="MCA Student, Java Full Stack Developer & Digital Marketing Specialist specializing in Web Technologies, SEO, and MySQL.">
     <meta name="twitter:image" content="images/keerthana.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +37,16 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <link rel="stylesheet" href="style.css?v=resume-sync-v22">
+    <script>
+        (function() {
+            try {
+                var theme = localStorage.getItem('keerthana-theme') || 
+                    (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (e) {}
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css?v=theme-toggle-v23">
 
 </head>
 
@@ -85,6 +93,9 @@
         </div>
 
         <div class="nav-actions">
+            <button class="nav-theme-toggle" id="portfolio-theme-toggle" onclick="togglePortfolioTheme()" title="Toggle Dark / Light Mode" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon" id="portfolio-theme-icon"></i>
+            </button>
             <a href="resume.html" target="_blank" class="nav-resume-btn">
                 <i class="fa-regular fa-file-pdf"></i> View Resume
             </a>
@@ -138,10 +149,7 @@
                 </h2>
 
                 <p class="hero-description">
-                    Detail-oriented <strong>Computer Application Post-Graduate (MCA)</strong> with proven expertise in
-                    <strong>Full Stack Development</strong>, <strong>.NET</strong>, and <strong>SQL</strong>. Passionate
-                    about building responsive user interfaces, structured database architectures, and scalable web
-                    solutions.
+                    Motivated <strong>MCA Student</strong>, <strong>Java Full Stack Developer</strong> &amp; <strong>Digital Marketing Specialist</strong> with strong knowledge in Java, Spring Boot, PHP, MySQL, and modern web engineering, alongside proven skills in SEO, content marketing, graphic design, and SaaS web solutions.
                 </p>
 
                 <!-- 3-Metric Stats Card -->
@@ -152,8 +160,8 @@
                     </div>
                     <div class="metric-divider"></div>
                     <div class="metric-item">
-                        <span class="metric-value">4+</span>
-                        <span class="metric-label">CORE TECH PROJECTS</span>
+                        <span class="metric-value">5+</span>
+                        <span class="metric-label">RESUME CORE PROJECTS</span>
                     </div>
                     <div class="metric-divider"></div>
                     <div class="metric-item">
@@ -177,7 +185,7 @@
 
                 <!-- Quick Contact Social Icons Row -->
                 <div class="hero-quick-socials">
-                    <a href="mailto:keerthanaramasamy3001@gmail.com" title="Email Keerthana" class="quick-social-icon">
+                    <a href="mailto:keerthanaramasamy1@gmail.com" title="Email Keerthana" class="quick-social-icon">
                         <i class="fa-solid fa-envelope"></i>
                     </a>
                     <a href="tel:+916383060233" title="Call Keerthana" class="quick-social-icon">
@@ -204,16 +212,16 @@
 
                     <!-- Main Circular Portrait Frame -->
                     <div class="photo-circle-frame">
-                        <img src="images/keerthana.png" alt="R Keerthana — Full Stack Web Developer"
+                        <img src="images/keerthana.png" alt="R Keerthana — Java Full Stack Developer & Digital Marketing"
                             class="hero-profile-img">
                         <!-- Tech Tags Strip -->
                         <div class="photo-tech-strip">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JS</span>
-                            <span>.NET</span>
-                            <span>SQL</span>
+                            <span>Java</span>
+                            <span>Spring Boot</span>
                             <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>SEO</span>
+                            <span>Marketing</span>
                         </div>
                     </div>
 
@@ -223,7 +231,7 @@
                             <i class="fa-solid fa-graduation-cap"></i>
                         </div>
                         <div class="badge-info">
-                            <h4>MCA Completed (71%)</h4>
+                            <h4>MCA Student (71%)</h4>
                             <p>Bharathidasan University</p>
                         </div>
                     </div>
@@ -231,11 +239,11 @@
                     <!-- Floating Badge 2: Bottom Left -->
                     <div class="float-badge badge-bottom-left">
                         <div class="badge-icon icon-db">
-                            <i class="fa-solid fa-database"></i>
+                            <i class="fa-solid fa-bullhorn"></i>
                         </div>
                         <div class="badge-info">
-                            <h4>.NET &amp; SQL Database</h4>
-                            <p>Relational Schema &amp; Views</p>
+                            <h4>Digital Marketing &amp; SEO</h4>
+                            <p>Social Media &amp; Content Strategy</p>
                         </div>
                     </div>
 
@@ -245,8 +253,8 @@
                             <i class="fa-solid fa-bolt"></i>
                         </div>
                         <div class="badge-info">
-                            <h4>Full-Stack Developer</h4>
-                            <p>Scalable Web Solutions</p>
+                            <h4>Java Full-Stack Developer</h4>
+                            <p>Web Apps &amp; SaaS Products</p>
                         </div>
                     </div>
 
@@ -295,24 +303,17 @@
                             <span class="w-dot dot-yellow"></span>
                             <span class="w-dot dot-green"></span>
                         </div>
-                        <div class="window-filename">keerthana_summary.cs</div>
+                        <div class="window-filename">keerthana_summary.java</div>
                     </div>
                     <div class="code-window-body">
                         <p>
-                            I am a passionate <strong>MCA Graduate</strong> &amp; <strong>Full Stack Web
-                                Developer</strong> with hands-on expertise in <strong>.NET</strong>, <strong>SQL
-                                relational databases</strong>, <strong>Java</strong>, and modern frontend engineering
-                            (<strong>HTML, CSS, JavaScript</strong>).
+                            I am a motivated <strong>MCA Student</strong>, <strong>Java Full Stack Developer</strong> &amp; <strong>Digital Marketing Specialist</strong> with strong knowledge in <strong>Java</strong>, <strong>Spring Boot</strong>, <strong>.NET</strong>, <strong>HTML, CSS, JavaScript</strong>, <strong>PHP</strong>, and <strong>MySQL</strong>.
                         </p>
                         <p>
-                            My core strengths lie in designing clean, scalable web architectures, structuring normalized
-                            relational schemas, and developing end-to-end interactive applications that deliver high
-                            user engagement and operational impact.
+                            Alongside my engineering background, I possess strong skills in <strong>Digital Marketing</strong>, <strong>Search Engine Optimization (SEO)</strong>, <strong>Social Media Marketing</strong>, <strong>Content Marketing</strong>, and <strong>Graphic Design</strong>.
                         </p>
                         <p>
-                            I possess strong problem-solving skills, rigorous attention to data integrity, and an
-                            adaptable mindset to continuously learn modern software stacks and contribute effectively to
-                            enterprise software and database development teams.
+                            Passionate about developing web applications and SaaS products, and eager to contribute my technical and marketing skills to an organization and grow along with it.
                         </p>
                     </div>
                 </div>
@@ -383,45 +384,41 @@
                             <i class="fa-solid fa-layer-group"></i>
                         </div>
                         <div class="focus-card-content">
-                            <h4>Full Stack &amp; Web Development</h4>
-                            <p>Responsive, accessible user interfaces crafted with HTML5, CSS3, JavaScript (ES6+),
-                                integrated seamlessly with robust backend logic.</p>
+                            <h4>Java Full Stack &amp; Web Development</h4>
+                            <p>Responsive, accessible user interfaces built with HTML5, CSS3, JavaScript, and Bootstrap, connected seamlessly to Java, Spring Boot, and PHP backends.</p>
                         </div>
                     </div>
 
                     <!-- Focus Card 2 -->
                     <div class="focus-card">
                         <div class="focus-icon-box box-cyan">
-                            <i class="fa-solid fa-database"></i>
+                            <i class="fa-solid fa-chart-line"></i>
                         </div>
                         <div class="focus-card-content">
-                            <h4>SQL &amp; Relational Database Architecture</h4>
-                            <p>Relational database design, complex queries, views, normalization, ACID compliance, data
-                                extraction, and MySQL administration.</p>
+                            <h4>Digital Marketing, SEO &amp; Content</h4>
+                            <p>Search Engine Optimization (SEO), social media marketing campaigns, high-impact content marketing, and audience engagement strategies.</p>
                         </div>
                     </div>
 
                     <!-- Focus Card 3 -->
                     <div class="focus-card">
                         <div class="focus-icon-box box-orange">
-                            <i class="fa-solid fa-code"></i>
+                            <i class="fa-solid fa-database"></i>
                         </div>
                         <div class="focus-card-content">
-                            <h4>.NET &amp; Enterprise Backend Logic</h4>
-                            <p>Object-oriented programming, .NET architecture, structured exception handling, modular
-                                code reusability, and API integrations.</p>
+                            <h4>MySQL Database &amp; SaaS Systems</h4>
+                            <p>Relational database design, queries, normalization, and SaaS architectures like the multi-tenant QR Menu and Real Estate CRM.</p>
                         </div>
                     </div>
 
                     <!-- Focus Card 4 -->
                     <div class="focus-card">
                         <div class="focus-icon-box box-emerald">
-                            <i class="fa-solid fa-code-compare"></i>
+                            <i class="fa-solid fa-palette"></i>
                         </div>
                         <div class="focus-card-content">
-                            <h4>Software Engineering &amp; Reliability</h4>
-                            <p>Structured exception handling, logging mechanisms, modular architecture, Git version
-                                control, and systematic problem solving.</p>
+                            <h4>Graphic Design &amp; Creative Media</h4>
+                            <p>Creative visual layouts, branding assets, digital banners, and presentation media tailored for brand identity and marketing impact.</p>
                         </div>
                     </div>
 
@@ -464,7 +461,7 @@
                     </svg>
                 </div>
                 <h3>Web Development</h3>
-                <p>HTML5, CSS3, JavaScript (ES6+), Responsive Web Design</p>
+                <p>HTML5, CSS3, JavaScript (ES6+), Bootstrap, Responsive UI Design</p>
                 <div class="sc-bar-wrap">
                     <div class="sc-bar sc-bar-pink" style="--pct:90%"></div>
                     <span class="sc-pct">90%</span>
@@ -472,23 +469,6 @@
             </div>
 
             <div class="skill-card" data-pct="88">
-                <div class="sc-icon sc-cyan">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M18 20V10" />
-                        <path d="M12 20V4" />
-                        <path d="M6 20v-6" />
-                    </svg>
-                </div>
-                <h3>.NET &amp; C# Development</h3>
-                <p>.NET Framework, C# Programming, ASP.NET Web Architectures, Entity Framework, APIs</p>
-                <div class="sc-bar-wrap">
-                    <div class="sc-bar sc-bar-cyan" style="--pct:88%"></div>
-                    <span class="sc-pct">88%</span>
-                </div>
-            </div>
-
-            <div class="skill-card" data-pct="85">
                 <div class="sc-icon sc-blue">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -497,10 +477,10 @@
                     </svg>
                 </div>
                 <h3>Java &amp; Backend Engineering</h3>
-                <p>Java (Core &amp; OOP), Spring Boot (Basics), PHP 8.x, RESTful API Integration</p>
+                <p>Java (Core &amp; OOP), Spring Boot, PHP 8.x, RESTful APIs, .NET</p>
                 <div class="sc-bar-wrap">
-                    <div class="sc-bar sc-bar-blue" style="--pct:85%"></div>
-                    <span class="sc-pct">85%</span>
+                    <div class="sc-bar sc-bar-blue" style="--pct:88%"></div>
+                    <span class="sc-pct">88%</span>
                 </div>
             </div>
 
@@ -513,47 +493,66 @@
                         <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3" />
                     </svg>
                 </div>
-                <h3>Databases &amp; SQL</h3>
-                <p>SQL Queries, Relational DBs, MySQL, Database Design, JSON</p>
+                <h3>Databases &amp; MySQL</h3>
+                <p>MySQL, Relational Schema Design, SQL Queries, Views, JSON Datasets</p>
                 <div class="sc-bar-wrap">
                     <div class="sc-bar sc-bar-violet" style="--pct:88%"></div>
                     <span class="sc-pct">88%</span>
                 </div>
             </div>
 
-            <div class="skill-card" data-pct="75">
-                <div class="sc-icon sc-blue">
+            <div class="skill-card" data-pct="88">
+                <div class="sc-icon sc-cyan">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
-                        <polyline points="16 18 22 12 16 6" />
-                        <polyline points="8 6 2 12 8 18" />
+                        <path d="M23 6l-9.5 9.5-5-5L1 18" />
+                        <path d="M17 6h6v6" />
                     </svg>
                 </div>
-                <h3>Programming</h3>
-                <p>C, C++ Programming, Basic Data Structures</p>
+                <h3>Digital Marketing &amp; SEO</h3>
+                <p>Social Media Marketing, Content Marketing, SEO (Search Engine Optimization), Analytics</p>
                 <div class="sc-bar-wrap">
-                    <div class="sc-bar sc-bar-blue" style="--pct:75%"></div>
-                    <span class="sc-pct">75%</span>
+                    <div class="sc-bar sc-bar-cyan" style="--pct:88%"></div>
+                    <span class="sc-pct">88%</span>
                 </div>
             </div>
 
-            <div class="skill-card" data-pct="78">
+            <div class="skill-card" data-pct="85">
                 <div class="sc-icon sc-pink">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 2a14.5 14.5 0 0 0 0 20 10 10 0 0 0 0-20"></path>
+                        <circle cx="8" cy="9" r="1.5"></circle>
+                        <circle cx="15" cy="9" r="1.5"></circle>
+                        <circle cx="10" cy="15" r="1.5"></circle>
+                    </svg>
+                </div>
+                <h3>Graphic Design &amp; Creative</h3>
+                <p>Graphic Design, Visual Branding, Social Media Creatives, Layouts &amp; Assets</p>
+                <div class="sc-bar-wrap">
+                    <div class="sc-bar sc-bar-pink" style="--pct:85%"></div>
+                    <span class="sc-pct">85%</span>
+                </div>
+            </div>
+
+            <div class="skill-card" data-pct="85">
+                <div class="sc-icon sc-blue">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="4" />
                         <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" />
                     </svg>
                 </div>
-                <h3>Tools &amp; Setup</h3>
-                <p>Git, GitHub, VS Code, XAMPP environment</p>
+                <h3>Tools &amp; Platforms</h3>
+                <p>Git, GitHub, VS Code, Eclipse, XAMPP Environment</p>
                 <div class="sc-bar-wrap">
-                    <div class="sc-bar sc-bar-pink" style="--pct:78%"></div>
-                    <span class="sc-pct">78%</span>
+                    <div class="sc-bar sc-bar-blue" style="--pct:85%"></div>
+                    <span class="sc-pct">85%</span>
                 </div>
             </div>
 
-            <div class="skill-card" data-pct="85">
+            <div class="skill-card" data-pct="90">
                 <div class="sc-icon sc-cyan">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -562,11 +561,11 @@
                         <path d="M9 12h4" />
                     </svg>
                 </div>
-                <h3>Applications</h3>
-                <p>MS Word, MS Excel, Documentations, Data Entry</p>
+                <h3>Productivity &amp; Office</h3>
+                <p>MS Excel, MS Word, MS PowerPoint, Technical Documentation</p>
                 <div class="sc-bar-wrap">
-                    <div class="sc-bar sc-bar-cyan" style="--pct:85%"></div>
-                    <span class="sc-pct">85%</span>
+                    <div class="sc-bar sc-bar-cyan" style="--pct:90%"></div>
+                    <span class="sc-pct">90%</span>
                 </div>
             </div>
 
@@ -771,7 +770,106 @@
 
         <div class="projects-grid">
 
-            <!-- Project 1: Smart ID Card Management System (Resume Project #1) -->
+            <!-- Project 1: QR Menu SaaS (Resume Project #1) -->
+            <div class="project-box" data-project="qr-menu" onclick="openProjectModal('qr-menu')">
+                <div class="proj-icon proj-icon-orange">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                </div>
+                <div class="proj-content">
+                    <div class="proj-badge-row">
+                        <span class="resume-proj-tag"><i class="fa-solid fa-file-invoice"></i> Resume Project #1</span>
+                    </div>
+                    <h2>QR Menu SaaS</h2>
+                    <p>A multi-tenant SaaS platform where restaurants create digital menus and generate a QR code; customers scan the code to view the live menu on their phones.</p>
+                    <div class="project-tech-tags">
+                        <span>PHP</span>
+                        <span>JSON</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>QR Code Generation</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://keerthana01.freepage.cc/qr-menu/" target="_blank" class="btn-proj demo"
+                            onclick="event.stopPropagation();">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Live Demo
+                        </a>
+                        <a href="#" class="btn-proj github" onclick="event.stopPropagation();">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Real Estate Lead & Site-Visit CRM (Resume Project #2) -->
+            <div class="project-box" data-project="realestate-crm" onclick="openProjectModal('realestate-crm')">
+                <div class="proj-icon proj-icon-gold">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M3 21h18"></path>
+                        <path d="M5 21V7l8-4v18"></path>
+                        <path d="M19 21V11l-6-4"></path>
+                        <path d="M9 9h1"></path>
+                        <path d="M9 13h1"></path>
+                        <path d="M9 17h1"></path>
+                    </svg>
+                </div>
+                <div class="proj-content">
+                    <div class="proj-badge-row">
+                        <span class="resume-proj-tag"><i class="fa-solid fa-file-invoice"></i> Resume Project #2</span>
+                    </div>
+                    <h2>Real Estate Lead &amp; Site-Visit CRM</h2>
+                    <p>A CRM to capture property enquiries, track leads through stages, and schedule and manage site visits for agents (extension of Kumbakonam Property Connect).</p>
+                    <div class="project-tech-tags">
+                        <span>PHP</span>
+                        <span>JSON</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://keerthana01.freepage.cc/realestatecrm/" target="_blank" class="btn-proj demo"
+                            onclick="event.stopPropagation();">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Live Demo
+                        </a>
+                        <a href="#" class="btn-proj github" onclick="event.stopPropagation();">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Smart ID Card Management System (Resume Project #3) -->
             <div class="project-box" data-project="id-card" onclick="openProjectModal('id-card')">
                 <div class="proj-icon proj-icon-blue">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -784,7 +882,7 @@
                 </div>
                 <div class="proj-content">
                     <div class="proj-badge-row">
-                        <span class="resume-proj-tag"><i class="fa-solid fa-file-invoice"></i> Resume Project #1</span>
+                        <span class="resume-proj-tag"><i class="fa-solid fa-file-invoice"></i> Resume Project #3</span>
                     </div>
                     <h2>Smart ID Card Management System</h2>
                     <p>A web application to design, generate, manage and print ID cards for organizations.</p>
@@ -820,7 +918,7 @@
                 </div>
             </div>
 
-            <!-- Project 2: PASPORT Framework (Resume Project #2) -->
+            <!-- Project 4: PASPORT Framework (Resume Project #4) -->
             <div class="project-box" data-project="pasport" onclick="openProjectModal('pasport')">
                 <div class="proj-icon proj-icon-green">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -830,7 +928,7 @@
                 </div>
                 <div class="proj-content">
                     <div class="proj-badge-row">
-                        <span class="resume-proj-tag"><i class="fa-solid fa-file-invoice"></i> Resume Project #2</span>
+                        <span class="resume-proj-tag"><i class="fa-solid fa-file-invoice"></i> Resume Project #4</span>
                     </div>
                     <h2>PASPORT: Location Proof Generation &amp; Verification Framework</h2>
                     <p>A secure web framework for generating and verifying location proofs with privacy protection.</p>
@@ -865,7 +963,7 @@
                 </div>
             </div>
 
-            <!-- Project 3: Suicidal Ideation Detection (Resume Project #3) -->
+            <!-- Project 5: Suicidal Ideation Detection (Resume Project #5) -->
             <div class="project-box" data-project="suicidal" onclick="openProjectModal('suicidal')">
                 <div class="proj-icon proj-icon-purple">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -876,12 +974,10 @@
                 </div>
                 <div class="proj-content">
                     <div class="proj-badge-row">
-                        <span class="resume-proj-tag"><i class="fa-solid fa-file-invoice"></i> Resume Project #3</span>
+                        <span class="resume-proj-tag"><i class="fa-solid fa-file-invoice"></i> Resume Project #5</span>
                     </div>
                     <h2>Suicidal Ideation Detection: Machine Learning Review Platform</h2>
-                    <p>A web based review platform to analyze and present machine learning methods for suicidal ideation
-                        detection.
-                    </p>
+                    <p>A web based review platform to analyze and present machine learning methods for suicidal ideation detection.</p>
                     <div class="project-tech-tags">
                         <span>PHP 8.x</span>
                         <span>HTML5</span>
@@ -899,101 +995,6 @@
                             GitHub
                         </a>
                         <a href="https://keerthana01.freepage.cc/project2/" target="_blank" class="btn-proj demo"
-                            onclick="event.stopPropagation();">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                            Demo
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 4: Restaurant QR Menu -->
-            <div class="project-box" data-project="qr-menu" onclick="openProjectModal('qr-menu')">
-                <div class="proj-icon proj-icon-orange">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <rect x="3" y="3" width="7" height="7"></rect>
-                        <rect x="14" y="3" width="7" height="7"></rect>
-                        <rect x="14" y="14" width="7" height="7"></rect>
-                        <rect x="3" y="14" width="7" height="7"></rect>
-                    </svg>
-                </div>
-                <div class="proj-content">
-                    <h2>Restaurant QR Menu</h2>
-                    <p>Restaurants generate custom table QR codes and manage live food menus. Customers scan with
-                        their
-                        phones to instantly view categories, dishes, and place orders.</p>
-                    <div class="project-tech-tags">
-                        <span>PHP</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>JSON</span>
-                        <span>HTML</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="#" class="btn-proj github" onclick="event.stopPropagation();">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
-                                <path
-                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                </path>
-                            </svg>
-                            GitHub
-                        </a>
-                        <a href="https://keerthana01.freepage.cc/qr-menu/" target="_blank" class="btn-proj demo"
-                            onclick="event.stopPropagation();">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                            Demo
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 5: Real Estate Lead & Site-Visit CRM -->
-            <div class="project-box" data-project="realestate-crm" onclick="openProjectModal('realestate-crm')">
-                <div class="proj-icon proj-icon-gold">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M3 21h18"></path>
-                        <path d="M5 21V7l8-4v18"></path>
-                        <path d="M19 21V11l-6-4"></path>
-                        <path d="M9 9h1"></path>
-                        <path d="M9 13h1"></path>
-                        <path d="M9 17h1"></path>
-                    </svg>
-                </div>
-                <div class="proj-content">
-                    <h2>Real Estate Lead &amp; Site-Visit CRM</h2>
-                    <p>Extending Kumbakonam Property Connect to manage real estate property listings, capture buyer
-                        leads, and coordinate client site-visit schedules.</p>
-                    <div class="project-tech-tags">
-                        <span>PHP</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>JSON</span>
-                        <span>HTML</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="#" class="btn-proj github" onclick="event.stopPropagation();">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
-                                <path
-                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                </path>
-                            </svg>
-                            GitHub
-                        </a>
-                        <a href="https://keerthana01.freepage.cc/realestatecrm/" target="_blank" class="btn-proj demo"
                             onclick="event.stopPropagation();">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
@@ -1373,11 +1374,7 @@
                     <div class="faq-toggle-btn">+</div>
                 </div>
                 <div class="faq-answer">
-                    I specialize in Full-Stack Web Development, building modern responsive frontend interfaces
-                    (HTML5,
-                    CSS3, JavaScript ES6+), scalable backend systems (.NET Framework, C#, Java, Spring Boot, PHP),
-                    and
-                    relational database architectures (SQL, MySQL, JSON datasets).
+                    I specialize in Java Full-Stack Web Development and Digital Marketing. On the technical side, I build modern responsive frontend interfaces (HTML5, CSS3, JavaScript, Bootstrap) and robust backend architectures (Java, Spring Boot, PHP, MySQL, REST APIs, SaaS platforms). On the marketing side, I drive brand visibility through Search Engine Optimization (SEO), content marketing, social media marketing campaigns, and graphic design.
                 </div>
             </div>
 
@@ -1417,10 +1414,7 @@
                     <div class="faq-toggle-btn">+</div>
                 </div>
                 <div class="faq-answer">
-                    I am actively seeking Entry-level / Junior Software Developer, Full-Stack Web Developer,
-                    Java/.NET
-                    Developer, or Backend Developer roles where I can contribute to production software, collaborate
-                    with engineering teams, and continuously enhance my skills.
+                    I am actively seeking Entry-level / Junior roles such as Java Full-Stack Developer, Web Developer, Digital Marketing Specialist, or SEO &amp; Content Marketing Associate where I can apply my dual technical development and digital marketing capabilities to build great products and drive audience growth.
                 </div>
             </div>
 
@@ -1636,7 +1630,7 @@
     </button>
 
     <!-- Main Javascript File -->
-    <script src="script.js?v=resume-sync-v22"></script>
+    <script src="script.js?v=resume-updated-v24"></script>
 
 </body>
 
