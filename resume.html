@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R Keerthana — Resume | Java Full Stack Developer</title>
+    <title>R Keerthana — Resume | Java Full Stack Developer &amp; Digital Marketing</title>
 
     <!-- Meta Description & SEO -->
     <meta name="description"
-        content="Official Resume of R Keerthana - MCA Graduate & Java Full Stack Developer. View technical skills, academic projects, education, and credentials.">
+        content="Official Resume of R Keerthana - MCA Student, Java Full Stack Developer & Digital Marketing (Fresher). View technical skills, academic projects, education, and credentials.">
     <meta name="author" content="R Keerthana">
 
     <!-- Fonts & Icons -->
@@ -19,8 +19,19 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <script>
+        (function () {
+            try {
+                var theme = localStorage.getItem('keerthana-theme') ||
+                    (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (e) { }
+        })();
+    </script>
+
     <style>
-        :root {
+        :root,
+        [data-theme="light"] {
             --primary: #4f46e5;
             --primary-dark: #4338ca;
             --primary-light: #eef2ff;
@@ -39,6 +50,22 @@
             --font-mono: 'JetBrains Mono', monospace;
         }
 
+        [data-theme="dark"] {
+            --primary: #818cf8;
+            --primary-dark: #a5b4fc;
+            --primary-light: rgba(99, 102, 241, 0.18);
+            --accent: #c084fc;
+            --text-main: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --bg-page: #0b0f19;
+            --bg-paper: #111827;
+            --border-color: #1f293d;
+            --border-strong: #334155;
+            --tag-bg: #1e293b;
+            --shadow-paper: 0 16px 40px -10px rgba(0, 0, 0, 0.55), 0 4px 14px -2px rgba(0, 0, 0, 0.35);
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -51,6 +78,7 @@
             background-color: var(--bg-page);
             line-height: 1.55;
             -webkit-font-smoothing: antialiased;
+            transition: background-color 0.25s ease, color 0.25s ease;
         }
 
         /* Top Action Bar (Fixed / Sticky) */
@@ -68,6 +96,13 @@
             justify-content: space-between;
             gap: 16px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+            transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        [data-theme="dark"] .resume-topbar {
+            background: rgba(17, 24, 39, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
         }
 
         .resume-nav-back {
@@ -85,6 +120,12 @@
             transition: all 0.2s ease;
         }
 
+        [data-theme="dark"] .resume-nav-back {
+            background: #1e293b;
+            color: var(--text-main);
+            border-color: var(--border-color);
+        }
+
         .resume-nav-back:hover {
             background: var(--primary-light);
             color: var(--primary);
@@ -99,6 +140,12 @@
             border-radius: 999px;
             border: 1px solid var(--border-color);
             gap: 4px;
+            transition: background-color 0.25s ease, border-color 0.25s ease;
+        }
+
+        [data-theme="dark"] .view-mode-tabs {
+            background: #1e293b;
+            border-color: var(--border-color);
         }
 
         .mode-tab-btn {
@@ -116,10 +163,20 @@
             gap: 6px;
         }
 
+        [data-theme="dark"] .mode-tab-btn {
+            color: var(--text-muted);
+        }
+
         .mode-tab-btn.active {
             background: #ffffff;
             color: var(--primary);
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        [data-theme="dark"] .mode-tab-btn.active {
+            background: #111827;
+            color: var(--primary);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
         }
 
         .resume-actions {
@@ -142,6 +199,31 @@
             transition: all 0.2s ease;
         }
 
+        /* Theme Toggle Button */
+        .btn-theme-toggle {
+            background: #ffffff;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-theme-toggle:hover {
+            background: #f1f5f9;
+            border-color: var(--text-muted);
+            transform: translateY(-1px);
+        }
+
+        [data-theme="dark"] .btn-theme-toggle {
+            background: #1e293b;
+            color: #fbbf24;
+            border-color: var(--border-color);
+        }
+
+        [data-theme="dark"] .btn-theme-toggle:hover {
+            background: #334155;
+            color: #fde047;
+            border-color: #475569;
+        }
+
         .btn-print {
             background: #ffffff;
             color: var(--text-main);
@@ -150,6 +232,17 @@
 
         .btn-print:hover {
             background: #f8fafc;
+            border-color: var(--text-muted);
+        }
+
+        [data-theme="dark"] .btn-print {
+            background: #1e293b;
+            color: var(--text-main);
+            border-color: var(--border-color);
+        }
+
+        [data-theme="dark"] .btn-print:hover {
+            background: #334155;
             border-color: var(--text-muted);
         }
 
@@ -185,7 +278,7 @@
         /* Resume Header */
         .res-header {
             text-align: center;
-            border-bottom: 2px solid #0f172a;
+            border-bottom: 2px solid var(--border-strong);
             padding-bottom: 20px;
             margin-bottom: 24px;
         }
@@ -195,7 +288,7 @@
             font-size: 2.2rem;
             font-weight: 800;
             letter-spacing: 1.5px;
-            color: #0f172a;
+            color: var(--text-main);
             text-transform: uppercase;
             margin-bottom: 4px;
         }
@@ -254,7 +347,7 @@
             font-family: var(--font-heading);
             font-size: 1.05rem;
             font-weight: 800;
-            color: #0f172a;
+            color: var(--text-main);
             text-transform: uppercase;
             letter-spacing: 0.8px;
             display: flex;
@@ -300,7 +393,7 @@
 
         .skill-category {
             font-weight: 700;
-            color: #0f172a;
+            color: var(--text-main);
         }
 
         .skill-list {
@@ -327,7 +420,7 @@
 
         .edu-degree {
             font-weight: 700;
-            color: #0f172a;
+            color: var(--text-main);
             font-size: 0.95rem;
         }
 
@@ -380,7 +473,7 @@
         .proj-name {
             font-weight: 700;
             font-size: 0.98rem;
-            color: #0f172a;
+            color: var(--text-main);
             margin-bottom: 0;
         }
 
@@ -438,6 +531,12 @@
             border: 1px solid #e2e8f0;
         }
 
+        [data-theme="dark"] .tech-pill {
+            background: #1e293b;
+            color: #c7d2fe;
+            border-color: #334155;
+        }
+
         /* Soft Skills & Extra Info */
         .info-list {
             list-style: none;
@@ -456,6 +555,12 @@
             font-weight: 500;
         }
 
+        [data-theme="dark"] .info-pill {
+            background: #1e293b;
+            border-color: var(--border-color);
+            color: var(--text-secondary);
+        }
+
         .cert-card {
             background: var(--primary-light);
             border-left: 4px solid var(--primary);
@@ -463,7 +568,29 @@
             border-radius: 0 8px 8px 0;
             font-weight: 600;
             font-size: 0.92rem;
-            color: #0f172a;
+            color: var(--text-main);
+        }
+
+        [data-theme="dark"] .cert-card {
+            background: rgba(99, 102, 241, 0.15);
+            border-left-color: var(--primary);
+            color: var(--text-main);
+        }
+
+        [data-theme="dark"] .edu-score {
+            color: #c7d2fe;
+            background: rgba(99, 102, 241, 0.22);
+        }
+
+        [data-theme="dark"] .proj-demo-link {
+            background: rgba(99, 102, 241, 0.18);
+            color: #c7d2fe;
+            border-color: rgba(129, 140, 248, 0.35);
+        }
+
+        [data-theme="dark"] .proj-demo-link:hover {
+            background: var(--primary);
+            color: #ffffff;
         }
 
         /* PDF Viewer Container (Hidden by default, activated via tab) */
@@ -477,6 +604,11 @@
             box-shadow: var(--shadow-paper);
             background: #ffffff;
             overflow: hidden;
+        }
+
+        [data-theme="dark"] .pdf-viewer-view {
+            background: #111827;
+            border-color: var(--border-color);
         }
 
         .pdf-viewer-view iframe {
@@ -582,6 +714,11 @@
 
         <!-- Action Buttons -->
         <div class="resume-actions">
+            <button class="btn-action btn-theme-toggle" id="theme-toggle-btn" onclick="toggleTheme()"
+                title="Toggle Dark / Light Mode" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon" id="theme-toggle-icon"></i>
+                <span id="theme-toggle-text">Dark Mode</span>
+            </button>
             <button class="btn-action btn-print" onclick="window.print()" title="Print Resume">
                 <i class="fa-solid fa-print"></i> Print
             </button>
@@ -600,7 +737,7 @@
             <!-- Header Section -->
             <header class="res-header">
                 <h1 class="res-name">R. Keerthana</h1>
-                <p class="res-role">MCA Student &bull; Java Full Stack Developer (Fresher)</p>
+                <p class="res-role">MCA Student &bull; Java Full Stack Developer &amp; Digital Marketing (Fresher)</p>
                 <div class="res-contact-bar">
                     <a href="tel:+916383060233" class="res-contact-item">
                         <i class="fa-solid fa-phone"></i> +91 6383060233
@@ -624,11 +761,7 @@
                 </h2>
                 <div class="res-section-body">
                     <p class="res-summary-text">
-                        Motivated MCA student with strong knowledge in Java, Spring Boot, .NET, HTML, CSS, JavaScript,
-                        PHP
-                        and MySQL. Passionate about developing web applications and SaaS products, and eager to
-                        contribute
-                        my technical skills to an organization and grow along with it.
+                        Motivated MCA student with strong knowledge in Java, Spring Boot, .NET, HTML, CSS, JavaScript, PHP and MySQL, along with skills in digital marketing, graphic design, social media marketing, content marketing and SEO. Passionate about developing web applications and SaaS products, and eager to contribute my technical and marketing skills to an organization and grow along with it.
                     </p>
                 </div>
             </section>
@@ -646,18 +779,26 @@
                         </div>
                         <div class="skill-row">
                             <span class="skill-category">Backend:</span>
-                            <span class="skill-list">PHP, Java, Spring Boot, C# (.NET)</span>
+                            <span class="skill-list">PHP, Java, Spring Boot</span>
                         </div>
                         <div class="skill-row">
                             <span class="skill-category">Database:</span>
-                            <span class="skill-list">MySQL, SQL Server</span>
+                            <span class="skill-list">MySQL</span>
                         </div>
                         <div class="skill-row">
-                            <span class="skill-category">Tools &amp; Platforms:</span>
+                            <span class="skill-category">Tools:</span>
                             <span class="skill-list">Git, GitHub, VS Code, Eclipse</span>
                         </div>
                         <div class="skill-row">
-                            <span class="skill-category">Other Software:</span>
+                            <span class="skill-category">Digital Marketing:</span>
+                            <span class="skill-list">Social Media Marketing, Content Marketing, SEO (Search Engine Optimization)</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-category">Design:</span>
+                            <span class="skill-list">Graphic Design</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-category">Other:</span>
                             <span class="skill-list">MS Excel, MS Word, MS PowerPoint</span>
                         </div>
                     </div>
@@ -867,7 +1008,8 @@
                 </h2>
                 <div class="res-section-body" style="display: flex; flex-direction: column; gap: 10px;">
                     <div>
-                        <strong style="font-size: 0.9rem; color: #0f172a; display: block; margin-bottom: 6px;">Soft
+                        <strong
+                            style="font-size: 0.9rem; color: var(--text-main); display: block; margin-bottom: 6px;">Soft
                             Skills:</strong>
                         <div class="info-list">
                             <span class="info-pill">Ability to Deal with People</span>
@@ -879,7 +1021,7 @@
                     </div>
                     <div>
                         <strong
-                            style="font-size: 0.9rem; color: #0f172a; display: block; margin-bottom: 6px;">Languages:</strong>
+                            style="font-size: 0.9rem; color: var(--text-main); display: block; margin-bottom: 6px;">Languages:</strong>
                         <div class="info-list">
                             <span class="info-pill">Tamil</span>
                             <span class="info-pill">English</span>
@@ -937,6 +1079,42 @@
                 tabPdf.classList.remove('active');
             }
         }
+
+        function getStoredTheme() {
+            return localStorage.getItem('keerthana-theme') ||
+                (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        }
+
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            try {
+                localStorage.setItem('keerthana-theme', theme);
+            } catch (e) { }
+
+            const icon = document.getElementById('theme-toggle-icon');
+            const text = document.getElementById('theme-toggle-text');
+            if (icon && text) {
+                if (theme === 'dark') {
+                    icon.className = 'fa-solid fa-sun';
+                    text.textContent = 'Light Mode';
+                } else {
+                    icon.className = 'fa-solid fa-moon';
+                    text.textContent = 'Dark Mode';
+                }
+            }
+        }
+
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme') || 'light';
+            const next = current === 'dark' ? 'light' : 'dark';
+            applyTheme(next);
+        }
+
+        // Initialize theme UI once DOM is ready
+        document.addEventListener('DOMContentLoaded', function () {
+            applyTheme(getStoredTheme());
+        });
+        applyTheme(getStoredTheme());
     </script>
 
 </body>
